@@ -1,2 +1,10 @@
 1. 조건문이란?
 - 주어진 조건에 따라서 애플리케이션을 다르게 동작하도록 하는 것. 프로그래밍의 핵심
+
+package org.opentutorials.javatutorials.condition;
+ 
+public class Condition1Demo {
+ 
+    public static void main(String[] args) {
+        if(true){
+            System.out.println("result : true");
