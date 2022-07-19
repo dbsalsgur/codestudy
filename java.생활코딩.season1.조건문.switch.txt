@@ -1,0 +1,38 @@
+1. switch문 
+- 대부분의 조건문은 if문이다. 하지만 사용빈도는 적지만 switch문이 로직을 더 명확하게 할 때도 있다.
+
+public class SwitchDemo {
+ 
+    public static void main(String[] args) {
+         
+        System.out.println("switch(1)");
+        switch(1){
+        case 1:
+            System.out.println("one");
+        case 2:
+            System.out.println("two");
+        case 3:
+            System.out.println("three");
+        }
+         
+        System.out.println("switch(2)");
+        switch(2){
+        case 1:
+            System.out.println("one");
+        case 2:
+            System.out.println("two");
+        case 3:
+            System.out.println("three");
+        }
+         
+        System.out.println("switch(3)");
+        switch(3){
+        case 1:
+            System.out.println("one");
+        case 2:
+            System.out.println("two");
+        case 3:
+            System.out.println("three");
+        }
+ 
+    }
