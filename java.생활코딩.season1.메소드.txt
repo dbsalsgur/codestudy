@@ -1,0 +1,267 @@
+1. 메소드
+- 메소드와 함수(fucntion은 같은 의미이다)
+- 메소드(method)는 코드를 재사용할 수 있게 해준다.
+- 형식
+public static void main(Stirng[] args){
+            return
+}
+- main이 메소드이다.
+- 메소드를 만들 때 public static이라고 적어야 함 → 객체지향때 자세히 다룰 예정
+
+2. 메소드의 정의와 호출
+- 직접 메소드를 만드는 것을 정의(define)라고 하고 만들어진 메소드를 실행하는 것을 호출(call)이라고 한다.
+
+public class MethodDemo1 {
+    public static void numbering() {
+        int i = 0;
+        while (i < 10) {
+            System.out.println(i);
+            i++;
+        }
+    }
+- 위 코드로 메소드를 정의할 수 있음
+- numbering이 메소드, 
+- numbering()뒤의 중괄호가 포함한 것이 numbering이라는 메소드의 본문
+    public static void main(String[] args) {
+        numbering();
+    }
+}
+- 위 코드로 numbering 메소드의 본문을 호출할 수 있음
+- 메소드() 뒤에 중괄호가 오면 정의, 아무것도 없으면 호출
+- 결과, 0,1,2, ... ,9까지 출력함
+- 만약 numbering()을 세번 작성해서 실행하면, 0부터 9까지가 3번 출력됨
+- numbering에 정의된 코드를 그대로 가져와서 입력해도 같은 결과가 나옴. 
+
+3. main
+- main 메소드는 규칙이다.
+- 프로그램을 만들 때 무조건 public static void main(String[] args)가 이끄는 중괄호 안에 코드를 입력해야함
+
+4. 메소드가 없다면
+- 0에서 9를 다섯번 출력하는 예제
+
+public class MethodDemo2 {
+     
+    public static void main(String[] args) {
+        int i = 0;
+        while(i<10){
+            System.out.println(i);
+            i++;
+        }
+         
+        i = 0;
+        while(i<10){
+            System.out.println(i);
+            i++;
+        }
+         
+        i = 0;
+        while(i<10){
+            System.out.println(i);
+            i++;
+        }
+         
+        i = 0;
+        while(i<10){
+            System.out.println(i);
+            i++;
+        }
+         
+        i = 0;
+        while(i<10){
+            System.out.println(i);
+            i++;
+        }
+    }
+ 
+}
+
+- 메소드의 호출을 통해서 이렇게 할 수 있음
+public class MethodDemo3 {
+    public static void numbering() {
+        int i = 0;
+        while (i < 10) {
+            System.out.println(i);
+            i++;
+        }
+    }
+ 
+    public static void main(String[] args) {
+        numbering();
+        numbering();
+        numbering();
+        numbering();
+        numbering();
+    }
+}
+
+- 메소드를 이용하면 코드의 재활용이 가능, 코드를 매우 적게 적어도 됨, 유지보수가 유리
+
+5. 입력과 출력
+- 만약 메소드를 하나 만들었는데, 유사한 로직이 필요하다면 메소드를 또 만들어야한다.
+- 입력값에 따라서 출력값이 달라지면 더욱 재활용성이 높아질 것이다.
+
+6. 매개변수와 인자
+
+public class MethodDemo4 {
+    public static void numbering(int limit→변수를 정수로 규정) {
+        int i = 0;
+        while (i < limit) {
+            System.out.println(i);
+            i++;
+        }
+    }
+ - 위코드는 고정적으로 취급 가능, 코드를 수정하지 않아도 활용가능
+    public static void main(String[] args) {
+        numbering(5);
+    }
+}
+- 01234가 출력됨
+- 만약  numbering(2)로 입력한다면 02가 출력된다. → 입력값에 따라 결과가 달라진다는 것
+- 위 코드의 동작은 numbering 메소드를 호출하고, int limit = 5가 되어(즉, limit이라는 변수에 5를 담는 것) 동작을 하게 됨. 
+- while문의 limit이라는 변수가 numbering()에 넣는 입력값에 따라 달라지는 것.
+- int limit같은 것을 매개변수(parameter), numbering안의 숫자를 인자(argument)라고 함
+
+public class MethodDemo5 {
+ 
+    public static void numbering(int init, int limit) {
+        int i = init;
+        while (i < limit) {
+            System.out.println(i);
+            i++;
+        }
+    }
+ 
+    public static void main(String[] args) {
+        numbering(1, 5);
+    }
+ 
+}
+- 만약 원하는 값부터 특정 값까지 출력을 하고 싶을때는 위 처럼 하면됨
+- 매개변수 사이에 콤마를 붙이고 다양하게 활용할 수 있다.
+
+7. 출력
+- return은 메소드에서 어떤 동작을 해서 결과를 돌려준다는 의미
+
+public class MethodDemo6 {
+    public static String numbering(int init, int limit) { 
+        int i = init;
+        // 만들어지는 숫자들을 output이라는 변수에 담기 위해서 변수에 빈 값을 주었다.
+        String output = "";
+        while (i < limit) {
+            // 숫자를 화면에 출력하는 대신 변수 output에 담았다.
+            output += i; → output = output + i와 같은 말
+            i++;
+        }
+        // 중요!!! output에 담겨 있는 문자열을 메소드 외부로 반환하려면 아래와 같이 return 키워드 뒤에 반환하려는 값을
+        // 배치하면 된다.
+        return output; →output값을 메소드 외부로 리턴
+    }
+- return에 도달하면 메소드는 무조건 종료, 변수의 값을 외부로 반환한다.
+- numbering 앞의 String은 메소드가 리턴할 값이 문자열이라는 것을 규정함.
+
+    public static void main(String[] args) {
+        // 메소드 numbering이 리턴한 값이 변수 result에 담긴다.
+        String result = numbering(1, 5);
+        // 변수 result의 값을 화면에 출력한다.
+        System.out.println(result);
+    }
+}
+- void는 비어있는이라는 뜻으로, main이라는 메소드의 return값이 존재하지 않는다는 것을 규정
+
+8. return을 통해 메소드값을 외부로 반환하는 이유
+- 메소드의 부품으로서의 가치를 높이기 위해서
+- 화면에 출력, 파일로 저장 등등 하나의 메소드로 여러가지를 할 수 있게 하면?
+→ 메소드의 활용가치가 높아짐
+
+public class MethodDemo7 {
+    public static String numbering(int init, int limit) {
+        int i = init;
+        String output = "";
+        while (i < limit) {
+            output += i;
+            i++;
+        }
+        return output;
+    }
+ 
+    public static void main(String[] args) {
+        String result = numbering(1, 5);
+        System.out.println(result);
+        try { // 무시
+            // 다음 행은 out.txt 라는 파일에 numbering이라는 메소드가 반환한 값을 저장합니다.
+            BufferedWriter out = new BufferedWriter(new FileWriter("out.txt")); 
+            out.write(result);
+            out.close();
+        } catch (IOException e) {
+        } // 무시
+    }
+}
+
+public class ReturnDemo {
+    public static int one() {
+        return 1;
+        return 2;
+        return 3;
+    }
+- return 뒤의 값을 반환하고 메소드는 종료.
+    public static void main(String[] args) {
+        System.out.println(one());
+    }
+}
+- 즉 1이 출력됨
+- return은 메소드에서 한번만 사용되는 것은 아님
+
+public class ReturnDemo2 {
+    public static String num(int i) {
+        if(i==0){
+            return "zero";
+        } else if(i==1){
+            return "one";
+        } else if(i==2){
+            return "two";
+        }
+        return "none";
+    }
+ 
+    public static void main(String[] args) {
+        System.out.println(num(1));
+    }
+}
+- if문이 false일때 return을 만나서 메소드가 종료되는 것이 아니라, else if로 넘어가는 것.
+
+10. 복수의 리턴
+- 여러개의 값을 출력하고 싶다면 하나의 변수에 여러개의 값을 담아서 출력하면 된다.
+- 배열에 복수의 값을 입력해서 리턴하면 됨
+
+public class ReturnDemo3 {
+    public static String getMember1() {
+        return "최진혁";
+    }
+ 
+    public static String getMember2() {
+        return "최유빈";
+    }
+ 
+    public static String getMember3() {
+        return "한이람";
+    }
+ 
+    public static void main(String[] args) {
+        System.out.println(getMember1());
+        System.out.println(getMember2());
+        System.out.println(getMember3());
+    }
+}
+- 좋은 코드가 아님. 그저 세개의 메소드를 하나씩 출력한것 뿐
+
+public class ReturnDemo4 {
+ 
+    public static String[] getMembers() {
+        String[] members = { "최진혁", "최유빈", "한이람" };
+        return members;
+    }
+ 
+    public static void main(String[] args) {
+        String[] members = getMembers();
+    }
+- 배열을 통해서 리턴은 한번하지만 메소드의 출력값은 복수로 할 수 있음
