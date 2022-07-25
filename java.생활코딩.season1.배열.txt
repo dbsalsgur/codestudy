@@ -107,7 +107,7 @@ public class ForeachDemo {
  
 }
 - e라는 문자열데이터의 변수 안에 members의 데이터를 하나씩 반복해서 담을 수 있다.
-- : members의 형식으로 사용
+- : (콜론)을 넣어서 사용
 
 6. 오류
 
