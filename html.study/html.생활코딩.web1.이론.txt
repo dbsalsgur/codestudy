@@ -1,0 +1,28 @@
+1. HTML(HyeprText Makeup Language)
+- 언어가 쉬움
+- public domain → 공공재이다
+
+2. HTML코딩과 실습환경 준비
+- webrowser
+- editer
+- 쓰고 싶은 에디터는 HTML editor를 검색
+
+3. 태그
+- 효과를 넣고싶으면 태그(TAG)를 사용한다.
+  <문법>넣고싶은 텍스트</문법>
+의 형식으로 작성한다. →앞의 것을 열리는 태그, 뒤의 것을 닫히는 태그라고 한다.
+ex) <strong>Electron Korea Limited</strong>
+- 태그는 표현하고자 하는 텍스트가 어떤 것인지 설명하는 문법이다.
+
+4. 여러가지 태그
+- strong : 진하게 표시
+- u : 밑줄긋기(underline의 준말)
+- h1~h6 : 모든단계의 제목
+
+5. 통계에 기반한 태그
+- https://advancedwebranking.com/html/
+
+6. 많이 쓰이는 태그
+- br : 줄바꿈
+- p : 단락
+
