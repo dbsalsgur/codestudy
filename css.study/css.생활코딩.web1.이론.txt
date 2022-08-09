@@ -83,3 +83,5 @@ height:20px;
 - 제목에 선을 긋고 싶을 때
 border-bottom: 1px solid gray;
 - 영역을 확인해가면서 font-size, padding, margin, border를 적절히 사용해서 디자인 가능
+
+8. 그리드
