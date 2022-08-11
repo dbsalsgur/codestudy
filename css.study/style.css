@@ -1,0 +1,48 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  padding: 20px;
+  margin: 0px;
+  display: block;
+  border-bottom: 2px solid gray;
+}
+
+ul {
+  border-left: 2px solid gray;
+}
+
+.saw {
+  color: gray;
+}
+
+.active {
+  color: red;
+}
+
+#active {
+  color: green;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: left;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+}
+
+@media(max-width:600px) {
+  #grid {
+    display: block;
+  }
+  img {
+    margin: 0px auto;
+    display: block;
+  }
+
+}

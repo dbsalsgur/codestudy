@@ -96,3 +96,25 @@ text1 text2가 페이지 전체를 왼쪽 오른쪽 두개로 나눠갖는다.
 - 웹사이트 소개 : caniuse.com
  → html css javascript에서 쓰고자 하는 기능을 써도 되는지 판단하는 사이트.
 - 선택자를 #grid ol 이런식으로 쓴다면 id 값이 grid인 모든 ol태그를 가리킨다. 
+
+9. 미디어 쿼리
+- 반응형 디자인, 반응형 웹, responsive web
+ → 스마트폰, 맥북, pc 등 다양한 화면에 대응하기 위한 디자인
+- 화면의 크기 모양에 따라서 웹페이지가 어떻게 표시하는지를 설정
+- 이미지 가운데 정렬
+ → 1. img에 div 부모태그를 사용해서 선택자를 통해
+ div{
+ text-align:center;
+}
+ 로 놓는 방법
+ → 2. img를 block level element로 설정하여 margin값을 0px로 주는방법
+- media query를 통해 무궁무진한 설정이 가능하다.
+
+10. css의 재활용
+- 웹페이지 유지보수 간 css 재활용이 가능하다
+- style태그로 묶었던 css를 style태그를 제외한 내용만 style.css의 형식으로 css파일로 저장한다
+- link 태그를 통해 해당 웹페이지가 지정된 css파일을 다운로드 해야된다고 알려줌으로써 css를 일일이 쓰지 않아도 적용할 수 있다.
+ex)
+<link rel="stylesheet" href="style.css">
+이렇게 하면 해당 css를 적용할 모든 웹페이지 파일들에 위와 같은 코드를 사용하여 css를 동시에 적용할 수 있다.
+ → 만약 웹페이지가 여러개인 상황에서 해당 css를 수정하면, 그 css를 사용하고 있는 모든 웹페이지의 디자인이 수정된다.
