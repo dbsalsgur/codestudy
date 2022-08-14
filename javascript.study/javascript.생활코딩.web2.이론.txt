@@ -31,3 +31,26 @@ document.write('1+1') → 출력값 1+1
 4. HTML과 javascript의 만남 : 콘솔
 - 페이지소스 보기의 콘솔
 - .length : 앞에 있는 요소의 글자수를 세주는 코드
+
+5. JS의 데이터타입 : 문자열과 숫자
+(1)데이터 타입
+- 원시 값 → 언어의 최저레벨에서 직접표현되는 불변 데이터
+  : Boolean, Null, Undefined, Number, Biglnt, String, Symbol
+- 객체 → 속성의 컬렉션
+(2)여러 코드들 
+- .toUpperCase() : 문자열을 대문자로 변환
+- .indexOf('') : 괄호안 문자의 시작 위치
+- .trim() : 문자열 공백 제거
+
+6. 변수와 대입연산자
+- 변수(variable) : 값이 바뀔 수 있는 수
+- 상수(constant) : 값이 바뀔 수 없는 수
+- 대입연산자 : 변수에 수를 대입할 수 있는 연산자
+ → 좌항과 우항을 결합하여 우항의 값을 만듦
+- 변수 선언 시 var(variable)를 써야 함
+ex) var name = 'myname'
+
+7. 제어할 태그 선택하기
+- document.querySelector() : 괄호 안의 태그, 클래스, id 선택자를 넣어서 선택자 기능 수행
+- .style : javascript에 style속성 삽입
+- style.backgroundColor : javascript 배경색
