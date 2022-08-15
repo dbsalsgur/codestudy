@@ -9,14 +9,20 @@
 
 <body>
   <a href="https://www.tel.com/"><img src="logo - 도쿄일렉트론코리아.png" alt="홈으로"></a>
-  <input type="button" value="night" onclick="
-  document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
-  ">
+
   <input type="button" value="day" onclick="
-  document.querySelector('body').style.backgroundColor='white';
-  document.querySelector('body').style.color='black';
+  var page = document.querySelector('body');
+  if(this.value === 'night'){
+    page.style.backgroundColor='white';
+    page.style.color='black';
+    this.value='day';
+  } else {
+    page.style.backgroundColor='black';
+    page.style.color='white';
+    this.value='night';
+  }
   ">
+
   <div id="grid">
     <div>
       <h1>Korea</h1>
