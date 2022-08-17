@@ -70,3 +70,9 @@ ex) var name = 'myname'
 - var friends, friends.push('');로 배열에 데이터를 추가할 수 있다.
 - 출력하고자 하는 값에 태그를 붙이기 위해서는 앞뒤로 +를 붙여준다.
 ex) document.write('<li>+friends+</li>')
+
+11. 함수
+- 수납상자와 같은 기능
+- java의 메소드와 비슷한 개념
+  → 호출가능, 재사용성 ↑
+- 마음대로 이름붙이기 가능
