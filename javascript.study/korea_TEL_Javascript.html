@@ -5,30 +5,29 @@
       <meta charset="utf-8">
       <link rel="stylesheet" href="style.css">
       <script>
+      function setColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+        console.log(alist[i]);
+        alist[i].style.color = 'blue';
+        i = i + 1;
+        }
+      }
          function nightdayHandler(self) {
          var page = document.querySelector('body');
          if (self.value === 'night') {
          page.style.backgroundColor = 'white';
          page.style.color = 'black';
          self.value = 'day';
-         var alist = document.querySelectorAll('a');
-         var i = 0;
-         while (i < alist.length) {
-         console.log(alist[i]);
-         alist[i].style.color = 'blue';
-         i = i + 1;
-         }
+
+         setColor('blue');
          } else {
          page.style.backgroundColor = 'black';
          page.style.color = 'white';
          self.value = 'night';
-         var alist = document.querySelectorAll('a');
-         var i = 0;
-         while (i < alist.length) {
-         console.log(alist[i]);
-         alist[i].style.color = 'powderblue';
-         i = 1 + i;
-         }
+         
+         setColor('powderblue');
          }
          }
       </script>
