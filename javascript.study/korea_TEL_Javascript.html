@@ -4,43 +4,8 @@
       <title> Korea | Tokyo Electron Ltd. </title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="style.css">
-      <script>
-      var Links = {
-        setColor:function(color){
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while (i < alist.length) {
-        console.log(alist[i]);
-        alist[i].style.color = color;
-        i = i + 1;
-          }
-        }
-      }
-      var Body = {
-        setColor:function (color){
-          document.querySelector('body').style.color = color;
-        },
-        setBackgroundColor:function(color){
-          document.querySelector('body').style.backgroundColor = color;
-        }
-      }
-         function nightdayHandler(self) {
-         var page = document.querySelector('body');
-         if (self.value === 'night') {
-           Body.setBackgroundColor('white');
-           Body.setColor('black');
-           self.value = 'day';
-
-         Links.setColor('blue');
-         } else {
-           Body.setBackgroundColor('black');
-           Body.setColor('white');
-           self.value = 'night';
-
-         Links.setColor('powderblue');
-         }
-         }
-      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>      
+      <script src="colors.js"></script>
    </head>
    <body>
       <a href="https://www.tel.com/">
