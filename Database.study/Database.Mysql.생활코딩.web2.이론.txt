@@ -15,9 +15,20 @@
 - CREATE DATABASE name : name 스키마 생성
 - DROP DATABASE name : name 스키마 삭제
 - USE name : name 스키마 사용 →명령 입력 시, 이후의 명령은 name이라는 스키마의 표에 적용되도록 한다는 의미
+- SHOW DATABASES : 데이터베이스 서버의 스키마 미리보기
 
 4. SQL과 테이블의 구조
 - SQL(Structured Query Language) : 데이터베이스 서버에 요청하기 위한 언어
 - table : 표
 - row, record : 행, 보통 데이터 하나하나
 - column : 열, 보통 데이터 타입 또는 구조
+
+5. 테이블의 생성
+- CREATE TABLE name : name이라는 이름의 테이블 생성
+- 사용자의 데이터 입력을 규제, 제한하는 기능이 있다. 
+  → column의 데이터타입 제한
+  → 데이터의 글자 수 제한 
+- 데이터타입은 검색글 참조.
+- id값은 없으면 나중에 찾지 못하고 삭제, 수정할 수 없으니 꼭 있어야한다.
+- NOT NULL : 값이 없는 것, 공백을 허용하지 않음
+- AUTO INCREMENT : column의 값을 자동으로 1씩 증가시킴
