@@ -32,3 +32,22 @@
 - id값은 없으면 나중에 찾지 못하고 삭제, 수정할 수 없으니 꼭 있어야한다.
 - NOT NULL : 값이 없는 것, 공백을 허용하지 않음
 - AUTO INCREMENT : column의 값을 자동으로 1씩 증가시킴
+
+6. INSERT
+- DESC : table의 구조
+- INSERT INTO name : name에 집어넣는다.
+  → 보통 column에 value를 집어넣는다. 괄호 안의 순서에 따라 입력되기 때문에 잘 넣어야한다.
+  ex) INSERT INTO topic(title, description, created) VALUES(MySQL, MySQL is..., NOW) 
+- 1 row affected : 하나의 행이 영향을 받았다. 테이블에 데이터를 입력하면 나오는 문구
+
+7. SELECT
+- SELECT * FROM name : name 테이블의 모든 데이터를 선택하여 읽는다.
+- SELECT 뒤에는 선택할 column을 지정한다.
+- *은 따로 값을 주지 않는다는 뜻
+- SELECT id, title, created, author FROM topic : id, title, created, author의 column에서 데이터를 선택하여 읽는다.
+- MySQL은 문법적으로 명령어를 작성할 때 지켜야하는 순서가 있다.
+- WHERE은 column을 지정한다. 
+- column지정 시 해당 column안의 특정 데이터를 가지고 있는 row만 보고 싶을 때 예제와 같이 쓴다
+ex) SELECT id, title, created, author FROM topic WHERE author='egoing';
+- ORDER BY name DESC : name column을 내림차순으로 정렬
+- LIMIT 3 : 데이터를 위에서부터 3개만 출력 
