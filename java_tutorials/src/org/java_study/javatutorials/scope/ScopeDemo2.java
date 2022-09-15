@@ -5,7 +5,7 @@ public class ScopeDemo2 {
 	    static int i;
 	     
 	    static void a() {
-	        i = 0;
+	       int i = 0;
 	    }
 	 
 	    public static void main(String[] args) {
