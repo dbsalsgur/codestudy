@@ -1,2 +1,21 @@
-1. overloading
-- 
+1. overloading의 개념
+- 클래스의 메소드를 정의할때, 같은 이름이지만 서로 다른 매개변수를 가진 메소드를 여러개 정의할 수 있는 기능
+- java는 메소드의 이름이 같더라도, 매개변수의 개수가 다르거나, 매개변수의 데이터 타입이 다르면 다른 메소드로 인식한다(overloading이 가능한 원인).
+- overloading은 사용자가 비슷한 기능을 쓸 때, 해당 기능의 메소드를 일일이 외워도 되지 않는 편의성을 제공한다.
+- overloading을 할때, 필연적으로 비슷한 부분이 상당 중복될 수 밖에 없다. 이를 개선할 수 있는 방법이 있다.
+ex) this.setOprands(left, right);
+     this.third = third;
+  → setOprands라는 메소드가 이미 있다면, 그 메소드를 호출하고, 추가할 로직을 넣어 새 메소드를 만들 수 있다.
+
+2. overloading의 규칙
+- 메소드의 서명(signature) = 이름, 매개변수의 데이터타입, 개수, 리턴타입
+- 같은 매개변수의 형식을 가지고 있는데, 리턴값이 달라지면 오류가 발생한다.
+- overloading시 같아야 할 점들 : 메소드 이름, 리턴타입
+- overloading시 달라야 할 점들 : 매개변수의 형식, 개수
+- 매개변수의 이름이 다른 것은 overloading에 영향을 줄 수 없다. 
+  → 매개변수의 이름은 해당 메소드 안에서 의미가 있는 것이지 호출 단계에서는 의미가 없기 때문.
+- 상속에서도 overloading이 가능하다.
+- overriding과 overloading의 차이
+ → 매개변수의 타입, 개수, 순서가 같아야지 overriding
+ → 메소드의 리턴타입, 이름만 같고 나머지는 다르면 overloading
+ → 리턴타입은 overriding, overloading 둘 다 같아야함.
