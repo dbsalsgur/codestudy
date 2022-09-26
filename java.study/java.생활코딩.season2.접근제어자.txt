@@ -31,3 +31,11 @@ ex)private String z(){
 같은 패키지, 상속 관계 아님	허용	허용	            허용	불용
 다른 패키지, 상속 관계	허용	허용	            불용	불용
 다른 패키지, 상속 관계 아님	허용	불용	            불용	불용
+
+5. 클래스의 접근제어자
+- 클래스는 public과 default 두개의 접근제어자만 가지고 있다.
+- public 클래스는 다른 패키지에서도 사용 가능하다.
+- default 클래스는 같은 패키지에서만 사용 가능하다.
+- public 클래스가 포함된 자바 소스코드는 public 클래스의 이름과 파일명이 동일해야 한다.
+ex) public class PublicClassDemo {} →  PublicClassDemo.java로 저장
+- 위의 말인 즉슨, 하나의 소스 코드에는 하나의 public 클래스만 가질 수 있다는 것이다.
