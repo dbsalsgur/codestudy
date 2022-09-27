@@ -13,7 +13,7 @@ class C1{
     void instance_static(){
         // 인스턴스 메소드에서는 클래스 변수에 접근 할 수 있다.
         System.out.println(static_variable);
-    }
+    } 
     void instance_instance(){        
         System.out.println(instance_variable);
     }
