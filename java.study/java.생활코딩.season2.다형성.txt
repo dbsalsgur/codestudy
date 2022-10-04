@@ -21,3 +21,10 @@ ex) public static void execute(Calculator cal){
     cal.run();
 }
   → cal에는 c1이나 c2같은 인스턴스가 들어가는 것이다.
+
+4. 인터페이스와 다형성
+- 자식클래스가 인스턴스를 생성할 때 부모클래스를 데이터타입으로 가질 수 있는 것 처럼, 클래스의 인스턴스 생성 시 구현한 인터페이스를 데이터타입으로 가질 수 있다.
+ex) interface I{}
+    class C implements I {}
+    I obj = new C;
+- 
