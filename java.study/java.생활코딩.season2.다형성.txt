@@ -27,4 +27,3 @@ ex) public static void execute(Calculator cal){
 ex) interface I{}
     class C implements I {}
     I obj = new C;
-- 

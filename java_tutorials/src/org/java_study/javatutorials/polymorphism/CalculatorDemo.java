@@ -33,6 +33,9 @@ class CalculatorDecoMinus extends Calculator {
     }
 } 
 public class CalculatorDemo {
+	public void test(int a) {
+		System.out.println(a);
+	}
 	public static void execute(Calculator cal) {
 		System.out.println("실행결과");
 		cal.run();
