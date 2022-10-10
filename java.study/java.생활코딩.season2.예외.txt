@@ -27,3 +27,6 @@ ex) java.lang.ArithmeticException: / by zero
 	at java_tutorials/org.java_study.javatutorials.exception.CalculatorDemo.main(CalculatorDemo.java:31)
   → 어느 프로젝트의 어느 패키지의 어느 클래스가 어느 행에서 오류가 났는지
 - try, catch 구문이 종료되면, catch 바깥에 있는 코드는 순서대로 실행된다.
+
+3. 다양한 예외들
+
