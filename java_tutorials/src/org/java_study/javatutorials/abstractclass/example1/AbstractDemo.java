@@ -1,4 +1,5 @@
 package org.java_study.javatutorials.abstractclass.example1;
+import java.lang.*;
 
 abstract class A{
     public abstract int b();
