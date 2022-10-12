@@ -46,4 +46,11 @@ ex) ArrayIndexOutOfBoundsException, ArithmeticException 등
   → Exception에서 이미 예외가 걸러지기 때문에 아래 Exception들은 동작할 일이 없기 때문.
 
 4. finally
--
+- finally는 예외와 관계 없이 실행되는 로직이며, 형식은 아래와 같다
+ex) try { 
+   syso 
+} catch(Exception e){
+   syso
+} finally {
+   syso
+}
