@@ -44,3 +44,6 @@ ex) ArrayIndexOutOfBoundsException, ArithmeticException 등
   → 맨 아래 catch에 Exception을 넣는 것
   → 만약 Exception을 catch의 제일 상위에 넣고 아래에 특정 Exception을 위치시킨다면 오류가 발생한다
   → Exception에서 이미 예외가 걸러지기 때문에 아래 Exception들은 동작할 일이 없기 때문.
+
+4. finally
+-
