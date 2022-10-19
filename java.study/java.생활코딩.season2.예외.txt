@@ -21,7 +21,7 @@ try {
 ex) / by zero
 - toString 메소드는 조금 더 자세히 출력한다
 ex) java.lang.ArithmeticException / by zero
-- printStackTrace 메소드는 예외처리를 하지 않았을 때 JVM 시스템에서 출력하는 오류 메세지를 출력한다.
+- printStackTrace 메소드는 예외처리를 하지 않았을 때 JVM 시스템에서 출력하는 오류 메세지를 출력한다.0
 ex) java.lang.ArithmeticException: / by zero
 	at java_tutorials/org.java_study.javatutorials.exception.Calculator.divide(CalculatorDemo.java:15)
 	at java_tutorials/org.java_study.javatutorials.exception.CalculatorDemo.main(CalculatorDemo.java:31)
@@ -71,3 +71,13 @@ ex) FileReader 클래스의 경우
 - FileReader는 특성 상 예외를 무조건 개발자에게 '던진다(throw)'
 - 그럼 개발자는 예외를 try catch 구문을 통해 '잡는다(catch)'
 - 이러한 예외를 다른사람에게 던질 수 있다.
+
+7. 책임의 전가 throws 
+- 실행클래스 D에서 클래스 C를 기반으로 한 인스턴스를 생성했고, 클래스 C의 메소드가 클래스 B를 인스턴스화 해서 호출하는 내용이라면, B에서 발생할 수 있는 예외를 C에게 던질(throws)수 있고, 그것을 C가 받아서 D로 던질 수 있다.
+- 메소드 뒤에 throws를 넣는 것은 해당 메소드의 로직에 대한 예외처리를 강제하는 것이다.
+ex) void run() throws FileNotFoundException{}
+- 예외는 중첩할 수도 있다.
+ex) try {
+  try {}
+} catch ~
+- throws는 다른 사용자에게 예외를 전가하는 것이고, catch는 자신이 예외를 처리하겠다는 것이다.
