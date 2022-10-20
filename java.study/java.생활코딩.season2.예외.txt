@@ -81,3 +81,18 @@ ex) try {
   try {}
 } catch ~
 - throws는 다른 사용자에게 예외를 전가하는 것이고, catch는 자신이 예외를 처리하겠다는 것이다.
+
+8. 예외 만들기
+- 우리는  예외를 발생시키는 API를 사용할 수도 있지만, 우리가 예외를 발생시키는 API를 만들 수도 있다.
+- 우리가 예외를 발생시키는 API를 만들어 사용자가 그것을 강제로 처리하게 할 수 있다.
+- if문을 사용해서 일정 조건에 부딪혔을 때 예외가 발생하게 만들 수 있는데, 이때 throw new를 사용해서 생성한다.
+ex) if(right == 0) {
+	throw new IllegalArgumentException("두번째 인자는 0을 허용하지 않습니다.");
+}
+- 메소드에 throw new를 통해 예외를 발생시키는 코드를 넣어 그것이 실행될 때 그 메소드는 바로 실행이 종료된다.
+- 기억할 만한 주요 Exception
+1)IllegalArgumentException	매개변수가 의도하지 않은 상황을 유발시킬 때
+2)IllegalStateException	메소드를 호출하기 위한 상태가 아닐 때
+3)NullPointerException	매개 변수 값이 null 일 때
+4)IndexOutOfBoundsException	인덱스 매개 변수 값이 범위를 벗어날 때
+5)ArithmeticException	산술적인 연산에 오류가 있을 때
