@@ -96,3 +96,21 @@ ex) if(right == 0) {
 3)NullPointerException	매개 변수 값이 null 일 때
 4)IndexOutOfBoundsException	인덱스 매개 변수 값이 범위를 벗어날 때
 5)ArithmeticException	산술적인 연산에 오류가 있을 때
+
+9. checked와 unchecked
+- 어떤 예외는 다른 처리를 하지 않아도 되고, 어떤 예외는 처리를 하도록 강제되어 있다.
+- java.io.Exception이라는 클래스에 예외를 처리할 때 사용하는 여러 하위 클래스가 있다.
+  → 이 클래스 위에는 java.io.Throwable이 상위 클래스로 있고, 그 상위에는 java.io.Object가 있다.
+- 예외의 종류
+(1) Throwable : 모든 예외의 부모 클래스
+ ① Error : Throwable의 하위 클래스. 사용자와 관계없이 JVM이 구동 불가능한 오류가 발생했을 때 발생하는 예외
+  → JVM이라는 기반시스템의 문제이기 때문에, 개발자가 할 수 있는 일은 없다.
+ ex) 메모리 용량이 부족하여 구동이 불가능한 문제 - 애플리케이션 로직으로 해결 불가능하나 효율적인 로직을 만드는 정도는 가능
+ ② Exception : 로직을 실행할 때 입력값 등으로 애플리케이션 내에서 발생하는 문제
+  > IOException
+  > RuntimeException
+    * ArithmeticException
+→ RuntimeException이 부모클래스이다 아니다가 IOException과 ArithmeticException의 가장 큰 차이
+- 부모 클래스 중에 RuntimeException이 있는 예외는 unchecked Exception, 없는 예외는 checked Exception이라고 한다.
+- Error도 unchecked Exception이다.
+- unchecked Exception는 처리를 하지 않아도 되는 예외, checked Exception는 try catch나 throws로 '반드시' 처리를 해야하는 예외이다.
