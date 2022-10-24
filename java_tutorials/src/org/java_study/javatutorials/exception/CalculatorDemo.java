@@ -5,9 +5,9 @@ class Calculator {
 
 	public void setOprands(int left, int right) {
 		//예외를 우리가 만든다면, 이 지점에서 right 인자에 대한 illegalArgummentException을 사용할 수 있다.
-		/*if(right == 0) {
-			throw new IllegalArgumentException("두번째 인자는 0을 허용하지 않습니다.");
-		}*/
+//		if(right == 0) {
+//			throw new IllegalArgumentException("두번째 인자는 0을 허용하지 않습니다.");
+//		}
 		this.left = left;
 		this.right = right;
 	}
@@ -17,12 +17,13 @@ class Calculator {
 			throw new ArithmeticException("0으로 나눌 수 없습니다.");
 		}
 		//예외를 우리가 만든다면, ArithmeticException을 사용할 수 있다.
-		//계산결과는 오류가 발생했습니다 : / by zero
     	try {
     		System.out.print("계산결과는 ");
     		System.out.print(this.left/this.right);
     		System.out.print(" 입니다.");
     	} catch(Exception e) {
+    		//System.out.println("오류가 발생했습니다 : "+e.getMessage());
+    		//try 구문을 실행할 때 순서대로 실행하다가 오류가 발생하는 순간에 catch 구문으로 넘어간다.
 /* 
 계산결과는 
 
@@ -44,7 +45,6 @@ java.lang.ArithmeticException: / by zero
 	        System.out.println("\n\ne.printStackTrace()");
 	        e.printStackTrace();
     	}
-    	//try, catch는 예외처리를 위한 핵심적인 문법
     }
 }
 
@@ -62,11 +62,9 @@ public class CalculatorDemo {
 		//그래서 위의 코드를 실행하면, getMessage API는 divide 메소드의 인스턴스에 입력한 "0으로 나눌 수 없습니다."가 출력되는 것이다.
 	}
 }
-/*
+/* ArthmeticException과 같은 산술적인 연산의 오류가 있을 때 c1.divide()를 호출하면
  * 아래와 같은 오류가 뜬다. 계산결과는 Exception in thread "main"
- * java.lang.ArithmeticException: / by zero at
- * org.opentutorials.javatutorials.exception.Calculator.divide(CalculatorDemo.
- * java:10) at
- * org.opentutorials.javatutorials.exception.CalculatorDemo.main(CalculatorDemo.
- * java:18)
+ * java.lang.ArithmeticException: / by zero 
+ * at org.opentutorials.javatutorials.exception.Calculator.divide(CalculatorDemo.java:10) 
+ * at org.opentutorials.javatutorials.exception.CalculatorDemo.main(CalculatorDemo.java:18)
  */

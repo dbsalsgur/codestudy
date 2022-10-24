@@ -114,3 +114,11 @@ ex) if(right == 0) {
 - 부모 클래스 중에 RuntimeException이 있는 예외는 unchecked Exception, 없는 예외는 checked Exception이라고 한다.
 - Error도 unchecked Exception이다.
 - unchecked Exception는 처리를 하지 않아도 되는 예외, checked Exception는 try catch나 throws로 '반드시' 처리를 해야하는 예외이다.
+
+10. 사용자 정의 예외
+- 표준예외 : 기본적으로 제공되는 예외 클래스
+  → 왠만하면 표준예외를 사용하는 것이 좋다.
+- 표준예외가 아닌 클래스를 직접 만들 수 있다.
+- 사용자 정의 클래스를 만들 때, 자신의 예외를 unchecked로 할 것인지 checked로 할 것인지를 정해야 한다.
+ → API 사용자 쪽에서 예외 상황을 복구할 수 있다면 checked 예외를 사용한다. - 사용자에게 예외처리를 강제
+ → API 사용자 쪽에서 예외 상황을 복구할 수 없어 프로그램을 종료하는 것이 나을 때 unchecked 예외를 사용한다.
