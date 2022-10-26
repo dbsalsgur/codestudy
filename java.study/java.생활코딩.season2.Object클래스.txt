@@ -1,1 +1,11 @@
 1. 소개
+- object 클래스 : 모든 클래스의 시조가 되는 클래스
+ex) 아래의 두 클래스는 같다
+package org.java_study.javatutorials.progenitor;
+
+class o {}
+
+class o extends Object {} 
+- 자바에서 기본적으로 제공해주는 클래스들, 사용자가 만드는 클래스들을 묶어주는 공통분모. 그것이 Object이다.
+- Object 클래스가 가지고 있는 메소드에서 클래스가 가져야 할 필수적 기능을 구현하고 있다.
+- 
