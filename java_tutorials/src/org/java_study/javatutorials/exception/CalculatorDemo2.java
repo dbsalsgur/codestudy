@@ -40,7 +40,7 @@ public class CalculatorDemo2 {
 		c2.setOprands(10, 0);
 		try{
 			c2.divide();
-		} catch(DivideException2 e) {
+		} catch(ArithmeticException e) {
 			System.out.println(e.getMessage());
 		}
 	}
