@@ -1,21 +1,22 @@
 package org.java_study.javatutorials.exception;
 
-class DivideException2 extends Exception{
+class DException extends Exception{
 	//Exception은 예외클래스가 checked임
 	public int left;
 	public int right;
-	DivideException2(){
+	DException(){
 		super();
 	} 
-	DivideException2(String message){
+	DException(String message){
 		super(message);
 	}
-	DivideException2(String message, int left, int right){
+	DException(String message, int left, int right){
 		super(message);
 		this.left = left;
 		this.right = right;
 	}
 }
+
 class Calculator2 {
 	int left, right;
 
@@ -24,9 +25,9 @@ class Calculator2 {
 		this.right = right;
 	}
 
-	public void divide()throws DivideException2 {
+	public void divide()throws DException {
 			if(right == 0) {
-				throw new DivideException2("0으로 나눌 수 없습니다.", this.left, this.right);
+				throw new DException("0으로 나눌 수 없습니다.", this.left, this.right);
 			}
 			System.out.println(this.left/this.right);
 		} 
@@ -36,11 +37,12 @@ class Calculator2 {
 
 public class CalculatorDemo2 {
 	public static void main(String[] args) {
-		Calculator c2 = new Calculator();
+		Calculator2 c2 = new Calculator2();
 		c2.setOprands(10, 0);
 		try{
 			c2.divide();
-		} catch(ArithmeticException e) {
+//			throw new DivideException2();
+		} catch(DException e) {
 			System.out.println(e.getMessage());
 		}
 	}

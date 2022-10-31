@@ -27,11 +27,11 @@ class Calculator1 {
 
 public class CalculatorDemo1 {
 	public static void main(String[] args) {
-		Calculator c1 = new Calculator();
+		Calculator1 c1 = new Calculator1();
 		c1.setOprands(10, 0);
 		try{
 			c1.divide();
-		} catch(ArithmeticException e) {
+		} catch(DivideException e) {
 			System.out.println(e.getMessage());
 		}
 	}
