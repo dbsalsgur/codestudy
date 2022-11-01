@@ -43,3 +43,13 @@ ex) Student _obj = (student)obj;
 - 인스턴스를 사용하는 것은 메모리(RAM)을 사용하는 것이다.
 - 메모리는 가장 빠르고, 비싸고, 적고, 소중한 자원이기 때문에, 왠만한 프로그램은 램을 적게 쓸 수록 좋다.
 - 자바는 인스턴스를 생성하여 변수에 담았는데, 그것이 사용되지 않는 경우 자동으로 쓰지 않은 데이터를 삭제한다.
+
+5. clone 메소드
+- clone : 어떤 객체가 있을 때 그 객체와 똑같은 객체를 복제해주는 기능
+- clone을 하려면 인스턴스를 생성할 때 활용한 클래스의 복제가능 여부를 JVM에게 알려주기 위해서 Cloneable 인터페이스를 구현해야한다.
+ex) class Student implements Cloneable {}
+- Cloneable 인터페이스의 내용을 확인해보면 아무것도 없다.
+- clone 메소드는 접근제어자가 protected이다.
+- protected는 다른 패키지에서 접근이 불가하기 때문에, 사용자 패키지에서 clone()메소드에 접근하는 것은 불가능하다.
+- clone 메소드는 CloneNotSupportedException을 무조건 발생시키므로 예외처리를 해야한다.
+- 모든 클래스는 Object클래스를 상속하기 때문에, toString, clone등은 모든 클래스에서 사용가능하다

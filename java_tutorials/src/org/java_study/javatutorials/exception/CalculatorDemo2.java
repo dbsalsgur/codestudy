@@ -41,7 +41,7 @@ public class CalculatorDemo2 {
 		c2.setOprands(10, 0);
 		try{
 			c2.divide();
-//			throw new DivideException2();
+			throw new DException();
 		} catch(DException e) {
 			System.out.println(e.getMessage());
 		}
