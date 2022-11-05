@@ -1,9 +1,16 @@
 package org.java_study.javatutorials.constant2;
 
 public class ConstantDemo {
+	//fruit
 	private final static int APPLE = 1;
 	private final static int PEACH = 2;
 	private final static int BANANA = 3;
+	
+	//company
+	private final static int GOOGLE = 1;
+	//private final static int APPLE = 2;
+	private final static int ORACLE = 3; 
+	
     public static void main(String[] args) {
         int type = APPLE;
         switch(type){
