@@ -6,4 +6,29 @@ ex) 1 = 2;
  → 둘다 상수이지만, 있을 수 없는 구문이다.
 
 2. enum의 배경
-- 
+- 상수를 지정할 때 보통 다음과 같이 지정한다. 
+ex) public static final int APPLE = 1;
+- 만약 복수의 그룹을 생성한다고 했을때, 상수의 이름이 겹친다면 이를 구분해줄 필요가 있을 것이다.
+ex) public static final int FRUIT_APPLE = 1;
+public static final int COMPANY_APPLE = 1;
+- 이를 interface를 통해서 그룹으로 묶어줄 수도 있다.
+ex) interface Fruit {
+	int APPLE = 1, PEACH = 2, BANANA = 3;
+}
+interface Company {
+	int GOOGLE = 1, APPLE = 2, ORACLE = 3;
+}
+→ 이 경우 만약 Fruit의 APPLE과 Company의 APPLE이 같은 상수 값을 가졌다면, 둘을 비교했을 때 같다고 출력이 되는 불상사가 발생할 수 있다.
+→ 이 오류는 꽤 치명적으로, 아래와 같은 상황이 발생할 수 있다.
+ex) int type = COMPANY_GOOGLE;
+	switch(type){
+		case FRUIT_APPLE:
+		System.out.println(57+" kcal");
+	}
+결과는 57 kcal
+- 상수가 같다는 이유로 의도와 다른 결과가 출력될 수 있는 것이다.
+- 이를 컴파일러 선에서 구분할 수 있는 방법은 class의 인스턴스화 이다.
+ → 다른 데이터타입을 비교하려고 하면 컴파일부터 안된다.
+- switch문은 원시적 데이터타입 밖에 인자로 넣을 수 없다.
+
+
