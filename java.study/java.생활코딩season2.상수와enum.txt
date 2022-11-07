@@ -31,4 +31,6 @@ ex) int type = COMPANY_GOOGLE;
  → 다른 데이터타입을 비교하려고 하면 컴파일부터 안된다.
 - switch문은 원시적 데이터타입 밖에 인자로 넣을 수 없다.
 
-
+3. enum의 문법
+- enum : 열거형(enumerated type)이라고 부른다. 연관되어 있는 상수들의 집합이다.
+- 
