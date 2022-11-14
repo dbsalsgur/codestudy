@@ -18,7 +18,8 @@ public class ReferenceDemo1 {
     public static void runReference(){
         A a = new A(1);
         A b = a;
-        b.id = 2;
+        //b.id = 2;
+        b = new A(2);
         System.out.println("runReference, "+a.id);      
         //결과 runReference, 2
     }
