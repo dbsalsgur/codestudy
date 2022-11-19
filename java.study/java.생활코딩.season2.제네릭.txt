@@ -14,4 +14,5 @@ Person<StringBulider> p2 = new Person<StringBuilder>();
 - 이는 데이터 타입의 존재 이유가 상당히 퇴색되는 일이다.
   → 타입이 안전하지 않은(type safety) 상황
 - 이를 방지하기 위해, 데이터 타입을 자유롭게 지정 가능한 generic이 만들어 졌다.
--  
+
+3. 제네릭의 특징
