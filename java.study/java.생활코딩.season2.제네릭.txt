@@ -16,3 +16,17 @@ Person<StringBulider> p2 = new Person<StringBuilder>();
 - 이를 방지하기 위해, 데이터 타입을 자유롭게 지정 가능한 generic이 만들어 졌다.
 
 3. 제네릭의 특징
+- 제네릭에는 기본형 데이터타입은 올 수 없고, 참조형 데이터 타입만 올 수 있다.
+  → 예를 들어 제네릭을 생성하고, int형을 지정하면 오류가 발생한다.
+- 위 같은 상황에서 기본 데이터 타입을 객체 클래스인 것 처럼 만들 수 있는 시스템, 래퍼 클래스(wrapper class)가 자바에 존재한다.
+- 래퍼 클래스 : 기본 데이터 타입을 객체로 포장하는 클래스.
+- intValue() : 래퍼 클래스로 담은 인스턴스 변수 의 값을, 기본 데이터로 바꾸어 반환하는 메소드
+ ex) Integer id = new Integer(1); / this.id = id 에서 intValue를 거치면, int형의 1로 반환
+
+4. 제네릭의 생략
+- 제네릭에 넣을 인스턴스를 따로 생성할 때, 그 인스턴스 변수를 매개변수로 하는 제네릭의 클래스의 인스턴스를 생성하면, 그 인스턴스에 각각 참조 데이터 타입을 지정해 주지 않아도, 자바 시스템 상 제네릭에 각각 앞에 선언한 참조형 데이터 타입이 들어갔다는 것을 인지한다.
+ex)    EmployeeInfo2 e = new EmployeeInfo2(1);
+    	Integer i = new Integer(10);
+       Person2 p1 = new Person2(e, i);
+	→ 위 처럼만 작성해도 Person2 <T, S>에 각각 EmployeeInfo2, Integer가 지정됨을 자바는 알고 있다.
+- 메소드에도 제네릭을 적용할 수 있다.
