@@ -1,21 +1,25 @@
 package org.java_study.javatutorials.generic;
 
-class StudentInfo{
-    public int grade;
-    StudentInfo(int grade){ this.grade = grade; }
+abstract class Info {
+	public abstract int getLevel();
 }
-class EmployeeInfo{
-    public int rank;
-    EmployeeInfo(int rank){ this.rank = rank; }
+class EmployeeInfo extends Info{
+	public int rank;
+	EmployeeInfo(int rank){this.rank = rank;}
+	public int getLevel() {
+		return this.rank;
+	}
 }
-class Person{
-    public Object info;
-    Person(Object info){ this.info = info; }
+class Person<T extends Info>{
+	public T info;
+	Person(T info) {
+		this.info = info;
+		info.getLevel();
+	}
 }
 public class GenericDemo {
     public static void main(String[] args) {
-    	Person p1 = new Person("부장");
-    	EmployeeInfo ei = (EmployeeInfo)p1.info;
-    	System.out.println(ei.rank);
+    	Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));
+    	//Person<String> p2 = new Person<String>("부장");
     }
 }
