@@ -61,3 +61,6 @@ ex) Iterator hi = A.iterator();
   →while문을 통해 하나씩 꺼낸다면, 다른 조건문 없이 모든 값을 꺼낼 수 있다.
 - iterator() 메소드를 통해 hi 변수에 담은 값은 참조값이고, 실제 데이터는 아니기 때문에 next()로 삭제되어도 문제가 없다.
 - iterator는 Collection 인터페이스를 구현한 모든 클래스에서 사용 가능하다.
+
+6. Map의 기본 사용법
+- 
