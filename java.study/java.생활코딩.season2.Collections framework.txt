@@ -64,3 +64,32 @@ ex) Iterator hi = A.iterator();
 
 6. Map의 기본 사용법
 - Map은 key와 value의 쌍으로 값을 저장하는 컬렉션이다.
+- Map은 key라는 저장공간과, value라는 저장공간을 가지게 된다.
+- Map에 저장 시 a.put("one", 1)과 같은 형식으로 저장하게 되는데, 이때 key에 저장된 값은 "one"이며, value에 저장된 값은 1이다.
+- Map에 저장된 값을 호출할 때 key값인 "one"을 입력하면 value값인 1이 반환되는 형식이다.
+- key값은 중복될 수 없다.
+- 만약 "one"이라는 key값과 1이라는 value값이 Map상에 존재할 때, ("one", 200)을 입력한다면, 기존의 one이라는 key는 유지가 되면서, 1이라는 값이 200으로 덮어쓰기가 된다.
+- value값은 중복이 허용된다.
+- 각각 다른 key가 둘 다 2라는 value를 가지고 있어도 오류는 발생하지 않는다.
+- 통상 맵을 쓴다고 하면 HashMap을 사용하게 된다.
+- MapName.put(key, value) : Map에서만 사용되는 API이며, key값과 value값을 저장하기 위한 메소드이다.
+- MapName.get(key) : key값을 통해 value를 호출할 수 있는 메소드
+- 인터페이스 안에 구현된 인터페이스의 데이터 타입은 Map.Entry와 같이 표현할 수 있다.
+※참고
+java map api의 method instance 부분을 보면
+Set<Map.Entry<K,V>> entrySet()
+Returns a Set view of the mappings contained in this map.
+라고 나옵니다.  이말은 entrySet()의 메소드를 호출하면, return값이 Set<Map.Entry<K, V>>이 된다는 말입니다.
+여기서 Map.Entry<K,V>는 Map안에 있는 nested class, 중첩클래스입니다. 
+Map자체를 Set의 제네릭 타입으로 두는게 아니라 Map의 Entry의 형태를 Set의 제네릭 타입으로 둔다는 이야기입니다.
+Set의 요소가 Interger나 String이 아니라 Map내부의 클래스인 Entry클래스인 것입니다. 여기서 Entry의 모양은 Key-value값을 갖는 하나의 객체입니다. 
+
+
+이 바탕으로 질문에 답을 드리자면, 굳이 Collection Interface를 구현하지 않아도, return값이 Set이기 때문에 사용이 가능합니다.
+여기서 return값은 내부 요소일 필요는 없습니다. 예를 들어서 int형의 64의 return값이 char이면 "A"가 됩니다. 데이터 타입은 자료를 해석하는 방식이기 때문에, 반드시 내부요소일 필요는 없습니다. Map의 Entry객체를 Set의 요소로 해석하는 것이 [ 리턴 값 : Set<Map.Entry<K,V>> 메소드 : entrySet() 형식인 것입니다 ]
+Map의 Key-value쌍 하나를 Entry객체로 만들고, 그것을 하나의 요소처럼 만드는 동작을 하는 것인 entrySet()입니다.
+그래서 그림을 잘 보시면,  Key-value를 하나의 객체로 만들어서 Set의 내부 변수로 쓰게 되는 것입니다.
+그러면 Set의 원소가 1, 2, 3, 4, 5처럼 쓰이듯 같이 Map의 Key-value값을 하나의 원소, 객체로 만들어서 1, 2, 3, 4, 5처럼 관리하게 되는 것입니다.
+
+
+결론적으로, Map의 Key-value값들이 entry()를 통해 하나의 객체로 만들어지고, 그 객체가 하나의 Set집합에 하나의 원소로 들어가게 됩니다. 여기서 Set은 Collection을 상속받았기에 iterator을 쓸 수 있게 되는 것입니다.
