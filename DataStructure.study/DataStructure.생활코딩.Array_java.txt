@@ -1,2 +1,2 @@
 1. Array java API 사용법
-- 
+- List : List는 자바의 Collection 클래스가 제공하는 인터페이스 중 하나이다.
