@@ -1,0 +1,64 @@
+1. Array java API 사용법
+- Array와 List는 차이가 있다
+ → Array(배열) : 데이터를 저장한 주소값이 존재하며, 그 값을 알면 바로 해당 데이터를 찾아낼 수 있다.
+ → List : 데이터의 순서가 중요하며, a 데이터 다음에 b데이터, c데이터 ....의 순서로 저장되어 있는 형태이다.
+- 위와 같은 특성으로 인해 Array와 List의 데이터 저장, 삭제 간에도 차이가 발생한다.
+ → Array : 데이터를 추가하면, 원본데이터에 덮어쓰기가 되는 형태가 된다. 삭제 시에는 해당 공간은 null상태가 되고 다른 저장공간에 있는 데이터는 그대로다.
+ → List : 데이터를 추가하면, 원본데이터 사이에 공간을 만들어 데이터를 집어 넣는다. 삭제 시에는 해당 공간은 List로 연결된 다른 데이터로 메워진다.
+
+2. List 기능
+- 처음, 끝, 중간에 데이터를 추가, 삭제하는 기능
+- List에 데이터가 있는지를 체크하는 기능
+- List에 저장된 모든 데이터에 접근할 수 있는 기능
+
+3. 언어별 비교
+(1) c : List를 제공하는 라이브러리가 존재하지 않음. 스스로 만들거나, 다른사람이 만든 것을 가져와야 함. 
+
+(2) javaScript : c와 닮아서 c Family Language라고도 한다. List기능이 구현되어 있다.
+ex) 
+
+numbers = [10,20,30,40,50];
+
+numbers.splice(3,1);
+→splice(a,b)의 a는 index값이며 위 배열에는 40이 해당된다. b는 데이터의 개수이다.
+→splice(a,b)의 기능은 a번째 데이터부터 b만큼 리턴하고, 리턴한 데이터를 배열에서 삭제하고 뒤에 있는 데이터를 a부터 순서대로 다시 저장한다.
+
+for(i = 0; i<numbers.length; i++) {
+	console.log(numbers[i]);
+}
+
+ → javascript에서는 배열이 리스트이기도 하다.
+
+(3) Python : 파이썬은 배열을 기본적으로 제공하지 않는 대신, 리스트를 제공한다.
+
+numbers = [10,20,30,40,50];
+
+numbers.pop(3);
+→ pop(a)은 List의 a번째에 있는 데이터를 삭제하는 기능이다. 삭제되면, 그 뒤에 있는 데이터들을 끌어와서 a부터 순서대로 다시 저장한다.
+numbers[0];
+→ 0번째에 있는 데이터를 리턴
+
+for number in numbers:
+	print(number);
+
+- Python은 리스트가 배열이다.
+※최근의 언어는 리스트를 기본적으로 지원한다.
+
+(4) java : 배열과 리스트를 각각 독립적인 다른 문법을 통해 구현하고 있다.
+ex) 
+
+int[] numbers = {10,20,30,40,50};
+
+ArrayList numbers = new ArrayList();
+numbers.add(10);
+numbers.add(20);
+numbers.add(30);
+numbers.add(40);
+numbers.add(50);
+numbers.remove(3);
+ →remove(a)는 a번째 데이터를 삭제하고, 그 뒤에 있는 데이터를 끌어와서 a번부터 순서대로 다시 저장한다.
+- java는 배열과 리스트를 모두 지원한다.
+- java의 List는 ArrayList, LinkedList의 두개가 있다.
+- ArrayList는 데이터의 추가, 삭제가 느린 반면, 인덱스 조회는 빠르다.
+- LinkedList는 데이터의 추가, 삭제가 빠른 반면, 인덱스 조회는 느리다.
+
