@@ -8,6 +8,9 @@ public class Main {
 		numbers.addLast(20);
 		numbers.addLast(30);
 		numbers.addLast(40);
+		numbers.add(1, 15);
+		numbers.addFirst(5);
+		System.out.println(numbers);
 	}
 
 }
