@@ -42,3 +42,6 @@ ex2) for(int value : numbers){
 5. ArrayList의 특징
 - ArrayList 객체에 담을 수 있는 양이 정해져있다. 
  → 정해져 있는 양보다 데이터 양이 많아지면, 그 크기를 늘릴 수 있도록 코딩이 되어있다.
+
+6. ArrayList의 구현
+(source 파일 참조)
