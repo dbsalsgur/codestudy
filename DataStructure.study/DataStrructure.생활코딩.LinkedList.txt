@@ -24,3 +24,15 @@
  → Link field : 다음 노드가 어디 있는지 저장하는 변수
 - HEAD : 첫번째 노드가 어디 있는지를 담고 있는 변수(노드가 아님)
 
+5. LinkedList 데이터 추가
+- 예시구조
+ 15 → 6 → 23 → 4 →7 → 71
+- 이때 HEAD에 85를 추가하게 되면 아래처럼 된다.
+85 →15 → 6 → 23 → 4 →7 → 71
+ →HEAD에 원래 15를 가리키도록 저장된 것이 85를 가리키도록 입력이되면 내부 동작으로 15 이하는 한칸씩 밀리게 되고 HEAD는 85를 가리키게 된다.
+- 이 동작을 유사코드로 나타내면 아래와 같다.
+ex) Vertex temp = new Vertex(input) → 85 생성	
+ temp.next = head → head값을 next즉 집어넣을 값의 다음 값에 지정
+ head = temp → 생성한 85를 head에 저장
+※Vertex는 node
+- node와 node는 next로 연결이 되어 있다(link field).
