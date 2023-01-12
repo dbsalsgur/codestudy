@@ -36,3 +36,22 @@ ex) Vertex temp = new Vertex(input) → 85 생성
  head = temp → 생성한 85를 head에 저장
 ※Vertex는 node
 - node와 node는 next로 연결이 되어 있다(link field).
+
+5-1. LinkedList 데이터를 중간에 추가
+- 예시구조 : 6 다음에 90을 넣은 상황이다.
+15 → 6 → 90 → 23 → 4 →7 → 71
+- 이 동작을 유사 코드로 나타내면 아래와 같다.
+Vertex temp1 = head → temp1에 head인 15를 넣는다
+while(--k! = 0)
+	temp1 = temp1.next 
+→ insert시 k번째에 넣는 것으로 입력한다. 즉 2번 자리라는 뜻이다. 
+→ --k이기 때문에 k의 값에서 1을 먼저 빼고 비교, 1 = 0이기 때문에 실행, 반복, k-1을 통해 0 = 0이기 때문에 실행 중단.
+→ 최종적으로 temp1은 6인 채 while문은 종료된다.
+Vertex temp2 = temp1.next → temp2에 temp1의 다음 값인 23을 입력
+Vertex newVertex = new Vertex(input) → 넣고자 하는 값인 90 생성
+temp1.next = newVertex → temp1의 다음 값으로 생성한 값인 90 입력 
+newVertex.next = temp2 → 생성한 값인 90의 다음 값으로 temp2, 즉, 23을 입력
+- 추가하고자 하는 값의 앞, 뒤 값을 temp1, temp2로 설정하여 동작하는 것이 포인트
+- head를 temp1에 담아서 temp1을 넣고자 하는 위치까지 while문으로 옮기는 것이 두번째 포인트
+- LinkedList에서 데이터를 중간에 추가할 때, 앞에 추가할 때 넣고자 하는 위치의 앞의 값과 뒤의 값만 알면 되기 때문에 ArrayList에 비해 상당히 간편하다.
+
