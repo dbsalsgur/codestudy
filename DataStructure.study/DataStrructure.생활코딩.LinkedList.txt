@@ -55,3 +55,4 @@ newVertex.next = temp2 → 생성한 값인 90의 다음 값으로 temp2, 즉, 2
 - head를 temp1에 담아서 temp1을 넣고자 하는 위치까지 while문으로 옮기는 것이 두번째 포인트
 - LinkedList에서 데이터를 중간에 추가할 때, 앞에 추가할 때 넣고자 하는 위치의 앞의 값과 뒤의 값만 알면 되기 때문에 ArrayList에 비해 상당히 간편하다.
 
+6. LinkedList 데이터 삭제
