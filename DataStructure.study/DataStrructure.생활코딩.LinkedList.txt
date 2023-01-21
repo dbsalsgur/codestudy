@@ -57,3 +57,4 @@ newVertex.next = temp2 → 생성한 값인 90의 다음 값으로 temp2, 즉, 2
 
 6. LinkedList 데이터 삭제
 - 예시구조
+15 → 6 → 90 → 23 → 4 →7 → 71
