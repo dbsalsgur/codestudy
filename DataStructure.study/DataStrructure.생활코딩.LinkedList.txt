@@ -58,3 +58,10 @@ newVertex.next = temp2 → 생성한 값인 90의 다음 값으로 temp2, 즉, 2
 6. LinkedList 데이터 삭제
 - 예시구조
 15 → 6 → 90 → 23 → 4 →7 → 71
+- 90을 삭제하고자 하는 상황이다.
+Vertex cur = head → 우선 head값을 찾아서 cur에 넣는다. 현재 cur엔 15가 할당 되어 있다.
+while(--k!=0) → 삭제하고자 하는 인덱스 값인 k가 0이 될때까지 cur에 next값을 넣어준다. --k이므로 k = 1일때 cur = 6이고 다음 실행단계에서 k=0이기 때문에 종료된다.
+	cur = cur.next
+Vertex tobedeleted = cur.next → 삭제하고자 하는 값을 tobedeleted에 넣는다.
+cur.next = cur.next.next →cur.next는 현재 90인데, cur.next.next의 값, 즉 23을 넣어준다. 이로서 tobedeleted값인 90이 분리된다.
+delete tobedeleted → 삭제하고자 하는 값 90을 삭제한다.
