@@ -65,3 +65,6 @@ while(--k!=0) → 삭제하고자 하는 인덱스 값인 k가 0이 될때까지
 Vertex tobedeleted = cur.next → 삭제하고자 하는 값을 tobedeleted에 넣는다.
 cur.next = cur.next.next →cur.next는 현재 90인데, cur.next.next의 값, 즉 23을 넣어준다. 이로서 tobedeleted값인 90이 분리된다.
 delete tobedeleted → 삭제하고자 하는 값 90을 삭제한다.
+
+7. LinkedList vs ArrayList
+- 
