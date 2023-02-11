@@ -67,4 +67,4 @@ cur.next = cur.next.next →cur.next는 현재 90인데, cur.next.next의 값, �
 delete tobedeleted → 삭제하고자 하는 값 90을 삭제한다.
 
 7. LinkedList vs ArrayList
-- 
+- 인덱스를 이용한 데이터 조회
